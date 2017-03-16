@@ -165,7 +165,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Uv7-aH-G4b" kind="showDetail" id="KCS-2i-Tjg"/>
+                                    <segue destination="Uv7-aH-G4b" kind="show" id="1gF-03-Ned"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="2860" y="133.5832083958021"/>
         </scene>
-        <!--Title-->
+        <!--New Character View Controller Scene-->
         <scene sceneID="RRq-1H-tJe">
             <objects>
-                <viewController storyboardIdentifier="NewCharacterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uv7-aH-G4b" customClass="NewCharacterViewController" customModule="D_DHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCharacterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uv7-aH-G4b" userLabel="New Character View Controller Scene" customClass="NewCharacterViewController" customModule="D_DHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xhv-UK-0aA"/>
                         <viewControllerLayoutGuide type="bottom" id="D1t-bj-iAk"/>
@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-bp-QFx" userLabel="Character Name Stack">
-                                <rect key="frame" x="15" y="95" width="345" height="35"/>
+                                <rect key="frame" x="15" y="74" width="345" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z36-8I-YVm" userLabel="Character Name">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="35"/>
@@ -222,7 +222,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-8C-hnE" userLabel="Class Stack">
-                                <rect key="frame" x="15" y="140" width="345" height="30"/>
+                                <rect key="frame" x="15" y="119" width="345" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZy-HY-ZJO" userLabel="Class">
                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="30"/>
@@ -239,7 +239,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCc-2R-uph" userLabel="Level Stack">
-                                <rect key="frame" x="15" y="180" width="345" height="30"/>
+                                <rect key="frame" x="15" y="159" width="345" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSL-XW-rHv" userLabel="Level">
                                         <rect key="frame" x="0.0" y="0.0" width="44.5" height="30"/>
@@ -256,7 +256,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lej-gm-glE">
-                                <rect key="frame" x="168" y="622" width="38" height="30"/>
+                                <rect key="frame" x="168" y="573" width="38" height="30"/>
                                 <state key="normal" title="Save!"/>
                             </button>
                         </subviews>
@@ -268,18 +268,19 @@
                             <constraint firstItem="Lej-gm-glE" firstAttribute="centerX" secondItem="Jag-FB-jW4" secondAttribute="centerX" id="PcP-3z-u2g"/>
                             <constraint firstItem="uFh-bp-QFx" firstAttribute="centerX" secondItem="Jag-FB-jW4" secondAttribute="centerX" id="QVI-9a-8X3"/>
                             <constraint firstItem="D1t-bj-iAk" firstAttribute="top" secondItem="Lej-gm-glE" secondAttribute="bottom" constant="15" id="amK-aQ-KTy"/>
-                            <constraint firstItem="uFh-bp-QFx" firstAttribute="top" secondItem="xhv-UK-0aA" secondAttribute="bottom" constant="75" id="ctG-e0-06V"/>
+                            <constraint firstItem="uFh-bp-QFx" firstAttribute="top" secondItem="xhv-UK-0aA" secondAttribute="bottom" constant="10" id="ctG-e0-06V"/>
                             <constraint firstItem="cqa-8C-hnE" firstAttribute="width" secondItem="Jag-FB-jW4" secondAttribute="width" constant="-30" id="e9n-qn-Xde"/>
                             <constraint firstItem="cqa-8C-hnE" firstAttribute="centerX" secondItem="Jag-FB-jW4" secondAttribute="centerX" id="gaO-Gn-Tws"/>
                             <constraint firstItem="lCc-2R-uph" firstAttribute="width" secondItem="Jag-FB-jW4" secondAttribute="width" constant="-30" id="yIS-gN-Cs0"/>
                             <constraint firstItem="cqa-8C-hnE" firstAttribute="top" secondItem="uFh-bp-QFx" secondAttribute="bottom" constant="10" id="ycg-fV-Iy9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8bZ-QE-UbS"/>
+                    <navigationItem key="navigationItem" title="Character Details" id="8bZ-QE-UbS"/>
                     <connections>
                         <outlet property="characterNameTextField" destination="S1k-9d-ghC" id="cWs-KX-h3I"/>
                         <outlet property="classTextField" destination="U5o-X4-PjP" id="nvg-ut-iv3"/>
                         <outlet property="levelTextField" destination="uva-kp-hQD" id="vmD-BM-Rni"/>
+                        <outlet property="saveButton" destination="Lej-gm-glE" id="f9k-tC-Yge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F65-ZH-CK5" userLabel="First Responder" sceneMemberID="firstResponder"/>

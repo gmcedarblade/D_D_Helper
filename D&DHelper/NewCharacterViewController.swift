@@ -11,6 +11,9 @@ import CoreData
 
 class NewCharacterViewController: UIViewController {
   
+  
+  @IBOutlet weak var saveButton: UIButton!
+  
   @IBOutlet weak var characterNameTextField: UITextField!
   
   
@@ -23,7 +26,7 @@ class NewCharacterViewController: UIViewController {
   var characterClass: String?
   var characterLevel: NSNumber?
   
-  var characterData: NSDictionary?
+  var characters: [NSManagedObject] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,25 +38,9 @@ class NewCharacterViewController: UIViewController {
     return formatter.number(from: string) as? NSDecimalNumber ?? 0
   }
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if (segue.identifier == "saveNewCharacterButton") {
-      
-      let svc = segue.destination as! CharacterViewController
-      //svc.getData()
-      
-    }
-  }
+
   @IBAction func saveNewCharacterButton(_ sender: Any) {
   
-//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//    let addCharacter = Character(context: context)
-//    addCharacter.name = characterNameTextField.text
-//    addCharacter.characterClass = classTextField.text
-//    addCharacter.level = stringToDecimal(string: levelTextField.text!)
-//    
-//    (UIApplication.shared.delegate as! AppDelegate).saveContext()
-    
-    navigationController?.popViewController(animated: true)
     
   }
 
