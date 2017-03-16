@@ -30,4 +30,15 @@ public class CharacterResult: NSManagedObject {
   @NSManaged public var strength: NSNumber?
   @NSManaged public var wisdom: NSNumber?
   
+  public override func value(forKey key: String) -> Any? {
+    
+    switch key {
+      case "name": return name
+      case "characterClass": return characterClass
+      case "level": return level
+    default: return nil
+    }
+    
+  }
+  
 }

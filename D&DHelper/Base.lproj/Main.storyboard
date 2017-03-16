@@ -152,7 +152,7 @@
         <scene sceneID="aWs-yb-XAQ">
             <objects>
                 <tableViewController storyboardIdentifier="CharacterScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F4u-Z7-XQv" customClass="CharacterViewController" customModule="D_DHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CharacterCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QVK-R5-BK4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QVK-R5-BK4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,6 +164,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Uv7-aH-G4b" kind="showDetail" id="KCS-2i-Tjg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -172,23 +175,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Characters" id="5L0-Kd-FM5">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="M0U-Ee-COU">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ifd-1E-81e">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add New"/>
-                                <connections>
-                                    <segue destination="Uv7-aH-G4b" kind="show" id="Ldc-B6-OkE"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="M0U-Ee-COU">
+                            <connections>
+                                <action selector="addNewCharacter:" destination="F4u-Z7-XQv" id="H8f-gm-ZbC"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="characterTable" destination="QVK-R5-BK4" id="Xmb-eN-dpq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOH-87-fYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2860" y="133.5832083958021"/>
         </scene>
-        <!--New Character View Controller-->
+        <!--Title-->
         <scene sceneID="RRq-1H-tJe">
             <objects>
                 <viewController storyboardIdentifier="NewCharacterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uv7-aH-G4b" customClass="NewCharacterViewController" customModule="D_DHelper" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-bp-QFx" userLabel="Character Name Stack">
-                                <rect key="frame" x="15" y="69" width="345" height="35"/>
+                                <rect key="frame" x="15" y="95" width="345" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z36-8I-YVm" userLabel="Character Name">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="35"/>
@@ -221,7 +222,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-8C-hnE" userLabel="Class Stack">
-                                <rect key="frame" x="15" y="114" width="345" height="30"/>
+                                <rect key="frame" x="15" y="140" width="345" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZy-HY-ZJO" userLabel="Class">
                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="30"/>
@@ -238,7 +239,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCc-2R-uph" userLabel="Level Stack">
-                                <rect key="frame" x="15" y="154" width="345" height="30"/>
+                                <rect key="frame" x="15" y="180" width="345" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSL-XW-rHv" userLabel="Level">
                                         <rect key="frame" x="0.0" y="0.0" width="44.5" height="30"/>
@@ -255,11 +256,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lej-gm-glE">
-                                <rect key="frame" x="168" y="573" width="38" height="30"/>
+                                <rect key="frame" x="168" y="622" width="38" height="30"/>
                                 <state key="normal" title="Save!"/>
-                                <connections>
-                                    <action selector="saveNewCharacterButton:" destination="Uv7-aH-G4b" eventType="touchUpInside" id="SBT-S6-grt"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -270,13 +268,14 @@
                             <constraint firstItem="Lej-gm-glE" firstAttribute="centerX" secondItem="Jag-FB-jW4" secondAttribute="centerX" id="PcP-3z-u2g"/>
                             <constraint firstItem="uFh-bp-QFx" firstAttribute="centerX" secondItem="Jag-FB-jW4" secondAttribute="centerX" id="QVI-9a-8X3"/>
                             <constraint firstItem="D1t-bj-iAk" firstAttribute="top" secondItem="Lej-gm-glE" secondAttribute="bottom" constant="15" id="amK-aQ-KTy"/>
-                            <constraint firstItem="uFh-bp-QFx" firstAttribute="top" secondItem="xhv-UK-0aA" secondAttribute="bottom" constant="5" id="ctG-e0-06V"/>
+                            <constraint firstItem="uFh-bp-QFx" firstAttribute="top" secondItem="xhv-UK-0aA" secondAttribute="bottom" constant="75" id="ctG-e0-06V"/>
                             <constraint firstItem="cqa-8C-hnE" firstAttribute="width" secondItem="Jag-FB-jW4" secondAttribute="width" constant="-30" id="e9n-qn-Xde"/>
                             <constraint firstItem="cqa-8C-hnE" firstAttribute="centerX" secondItem="Jag-FB-jW4" secondAttribute="centerX" id="gaO-Gn-Tws"/>
                             <constraint firstItem="lCc-2R-uph" firstAttribute="width" secondItem="Jag-FB-jW4" secondAttribute="width" constant="-30" id="yIS-gN-Cs0"/>
                             <constraint firstItem="cqa-8C-hnE" firstAttribute="top" secondItem="uFh-bp-QFx" secondAttribute="bottom" constant="10" id="ycg-fV-Iy9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="8bZ-QE-UbS"/>
                     <connections>
                         <outlet property="characterNameTextField" destination="S1k-9d-ghC" id="cWs-KX-h3I"/>
                         <outlet property="classTextField" destination="U5o-X4-PjP" id="nvg-ut-iv3"/>
