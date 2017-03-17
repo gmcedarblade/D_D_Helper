@@ -251,7 +251,7 @@
                                         <rect key="frame" x="192" y="0.0" width="192" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -335,7 +335,7 @@
                                         <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -355,7 +355,7 @@
                                         <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -372,7 +372,7 @@
                                         <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -389,7 +389,7 @@
                                         <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -406,7 +406,7 @@
                                         <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -423,7 +423,7 @@
                                         <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -472,10 +472,19 @@
                     </view>
                     <navigationItem key="navigationItem" title="Character Details" id="8bZ-QE-UbS"/>
                     <connections>
+                        <outlet property="alignmentTextField" destination="tRA-1F-Blr" id="MqE-HG-lJH"/>
+                        <outlet property="backgroundTextField" destination="18p-gB-jCE" id="I1p-pi-XVG"/>
                         <outlet property="characterNameTextField" destination="S1k-9d-ghC" id="cWs-KX-h3I"/>
+                        <outlet property="charismaTextField" destination="8dj-Ue-Gjx" id="SLO-sN-yAF"/>
                         <outlet property="classTextField" destination="U5o-X4-PjP" id="nvg-ut-iv3"/>
+                        <outlet property="constitutionTextField" destination="air-Bg-bPA" id="hr9-gr-vQV"/>
+                        <outlet property="dexterityTextField" destination="Jhw-MM-Dns" id="zdx-I7-TS3"/>
+                        <outlet property="intelligenceTextField" destination="NkL-s3-9Ah" id="ccd-51-8KJ"/>
                         <outlet property="levelTextField" destination="uva-kp-hQD" id="vmD-BM-Rni"/>
+                        <outlet property="raceTextField" destination="An1-nv-vw9" id="vfs-H5-jhe"/>
                         <outlet property="saveButton" destination="Lej-gm-glE" id="f9k-tC-Yge"/>
+                        <outlet property="strengthTextField" destination="dxq-Ae-g4H" id="1K1-tc-ytU"/>
+                        <outlet property="wisdomTextField" destination="88Y-1x-ezs" id="Dua-Rg-e2F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F65-ZH-CK5" userLabel="First Responder" sceneMemberID="firstResponder"/>

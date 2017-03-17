@@ -34,20 +34,6 @@ class CharacterViewController: UITableViewController {
     
     super.viewWillAppear(animated)
     
-//    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//      return
-//    }
-//    
-//    let managedContext = appDelegate.persistentContainer.viewContext
-//    
-//    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Character")
-//    
-//    do {
-//      characters = try managedContext.fetch(fetchRequest)
-//    } catch let error as NSError {
-//      print("Could not fetch. \(error), \(error.userInfo)")
-//    }
-    
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
       fatalError()
     }
@@ -142,30 +128,14 @@ class CharacterViewController: UITableViewController {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-//    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//      return
-//    }
-//    
-//    let managedContext = appDelegate.persistentContainer.viewContext
-//    
-//    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Character")
-//    
-//    do {
-//      characters = try managedContext.fetch(fetchRequest)
-//    } catch let error as NSError {
-//      print("Could not fetch. \(error), \(error.userInfo)")
-//    }
-    
     if let destination = segue.destination as? NewCharacterViewController {
       if let indexPath = tableView.indexPathForSelectedRow {
         destination.character = characters[indexPath.row]
       }
     }
-//
-//    let destination = segue.destinationViewController as! NewCharacterViewController
-//    let indexPath = tableView.indexPathForSelectedRow!
-//    let selectedObject = fetchRequest.obje
+
   }
   
 }
+
 

@@ -17,6 +17,9 @@ class SettingsViewController: UIViewController {
   
   @IBOutlet weak var saveButton: UIButton!
   
+  
+  var savedResults = [Character]()
+  
   let keychainWrapper = KeychainWrapper()
   
   override func viewDidLoad() {
@@ -30,14 +33,11 @@ class SettingsViewController: UIViewController {
       
       usernameTextField.text = UserDefaults.standard.value(forKey: "usernameTextField") as? String
       passwordTextField.text = keychainWrapper.myObject(forKey: kSecValueData) as? String
-      saveButton.setTitle("Update Settings", for: UIControlState())
+      saveButton.setTitle("Change User", for: UIControlState())
       
     }
     
   }
-  
-  
-  
   
   @IBAction func saveUserInfo(_ sender: Any) {
     
@@ -50,7 +50,7 @@ class SettingsViewController: UIViewController {
       keychainWrapper.mySetObject(passwordTextField.text, forKey: kSecValueData)
       keychainWrapper.writeToKeychain()
       
-      saveButton.setTitle("Update Settings", for: UIControlState())
+      saveButton.setTitle("Change User", for: UIControlState())
       
     } else {
       
@@ -63,8 +63,14 @@ class SettingsViewController: UIViewController {
   override func encodeRestorableState(with coder: NSCoder) {
     
     super.encodeRestorableState(with: coder)
-    coder.encode(usernameTextField.text, forKey: "usernameTextField")
-    coder.encode(passwordTextField.text, forKey: "passwordTextField")
+    
+    if (usernameTextField.text != nil) {
+      coder.encode(usernameTextField.text, forKey: "usernameTextField")
+    }
+    if (passwordTextField.text != nil) {
+      coder.encode(passwordTextField.text, forKey: "passwordTextField")
+    }
+    
     
   }
   
