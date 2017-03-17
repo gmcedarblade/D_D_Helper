@@ -18,12 +18,13 @@ class CharacterViewController: UITableViewController {
   @IBOutlet weak var characterTable: UITableView!
 
   
-  var characters = [NSManagedObject]()
+  var characters = [Character]()
   
   override func viewDidLoad() {
 
     super.viewDidLoad()
 
+    characterTable.delegate = self
     
   }
   
@@ -33,19 +34,31 @@ class CharacterViewController: UITableViewController {
     
     super.viewWillAppear(animated)
     
+//    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+//      return
+//    }
+//    
+//    let managedContext = appDelegate.persistentContainer.viewContext
+//    
+//    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Character")
+//    
+//    do {
+//      characters = try managedContext.fetch(fetchRequest)
+//    } catch let error as NSError {
+//      print("Could not fetch. \(error), \(error.userInfo)")
+//    }
+    
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-      return
+      fatalError()
     }
     
-    let managedContext = appDelegate.persistentContainer.viewContext
+    let context = appDelegate.persistentContainer.viewContext
+    let fetchRequest: NSFetchRequest<Character> = Character.fetchRequest()
     
-    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Character")
-    
-    do {
-      characters = try managedContext.fetch(fetchRequest)
-    } catch let error as NSError {
-      print("Could not fetch. \(error), \(error.userInfo)")
+    if let results = try? context.fetch(fetchRequest) {
+      characters = results
     }
+    
     tableView.reloadData()
   }
   
@@ -93,7 +106,7 @@ class CharacterViewController: UITableViewController {
     
     do {
       try managedContext.save()
-      characters.append(character)
+      characters.append(character as! Character)
     } catch let error as NSError {
       print("Could not save. \(error), \(error.userInfo)")
     }
@@ -145,7 +158,7 @@ class CharacterViewController: UITableViewController {
     
     if let destination = segue.destination as? NewCharacterViewController {
       if let indexPath = tableView.indexPathForSelectedRow {
-        destination.characters = [characters[indexPath.row]]
+        destination.character = characters[indexPath.row]
       }
     }
 //

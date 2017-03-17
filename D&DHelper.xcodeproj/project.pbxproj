@@ -10,7 +10,6 @@
 		F4B09C3E1E786B750051B1AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B09C3D1E786B750051B1AB /* SettingsViewController.swift */; };
 		F4B09C431E78708A0051B1AB /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B09C421E78708A0051B1AB /* KeychainWrapper.m */; };
 		F4B09C4D1E7877DA0051B1AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B09C4C1E7877DA0051B1AB /* Extensions.swift */; };
-		F4B09C4F1E788E730051B1AB /* CharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B09C4E1E788E730051B1AB /* CharacterResult.swift */; };
 		F4B09C511E7995B80051B1AB /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B09C501E7995B80051B1AB /* CharacterViewController.swift */; };
 		F4B09C541E79AA4A0051B1AB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B09C531E79AA4A0051B1AB /* MainMenuViewController.swift */; };
 		F4B09C561E79F0040051B1AB /* NewCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B09C551E79F0040051B1AB /* NewCharacterViewController.swift */; };
@@ -28,10 +27,10 @@
 		F4B09C421E78708A0051B1AB /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		F4B09C441E78729F0051B1AB /* D&DHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D&DHelper.entitlements"; sourceTree = "<group>"; };
 		F4B09C4C1E7877DA0051B1AB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F4B09C4E1E788E730051B1AB /* CharacterResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterResult.swift; sourceTree = "<group>"; };
 		F4B09C501E7995B80051B1AB /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		F4B09C531E79AA4A0051B1AB /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		F4B09C551E79F0040051B1AB /* NewCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCharacterViewController.swift; sourceTree = "<group>"; };
+		F4B09C571E7B91110051B1AB /* CharacterResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterResult.swift; sourceTree = "<group>"; };
 		F4DABE2C1E7747350079AF7D /* D&DHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&DHelper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DABE2F1E7747350079AF7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4DABE341E7747350079AF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,8 +107,8 @@
 				F4B09C3F1E78704F0051B1AB /* Bridging-Header.h */,
 				F4DABE391E7747350079AF7D /* Assets.xcassets */,
 				F4DABE3B1E7747350079AF7D /* LaunchScreen.storyboard */,
-				F4B09C4E1E788E730051B1AB /* CharacterResult.swift */,
 				F4DABE3E1E7747350079AF7D /* Info.plist */,
+				F4B09C571E7B91110051B1AB /* CharacterResult.swift */,
 				F4DABE361E7747350079AF7D /* D_DHelper.xcdatamodeld */,
 			);
 			path = "D&DHelper";
@@ -198,7 +197,6 @@
 				F4DABE381E7747350079AF7D /* D_DHelper.xcdatamodeld in Sources */,
 				F4B09C561E79F0040051B1AB /* NewCharacterViewController.swift in Sources */,
 				F4B09C511E7995B80051B1AB /* CharacterViewController.swift in Sources */,
-				F4B09C4F1E788E730051B1AB /* CharacterResult.swift in Sources */,
 				F4DABE301E7747350079AF7D /* AppDelegate.swift in Sources */,
 				F4B09C3E1E786B750051B1AB /* SettingsViewController.swift in Sources */,
 				F4B09C431E78708A0051B1AB /* KeychainWrapper.m in Sources */,
