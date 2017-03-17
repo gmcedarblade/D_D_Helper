@@ -21,5 +21,16 @@ class MainMenuViewController: UIViewController {
     self.navigationController?.setNavigationBarHidden(false, animated: animated)
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    // 1. Check for credentials
+    if UserDefaults.standard.bool(forKey: "hasCredentials") {
+      
+      self.tabBarController?.selectedIndex = 0
+      
+    } else {
+      // 2. No credentials, send to settings
+      self.tabBarController?.selectedIndex = 1
+    }
+  }
   
 }
