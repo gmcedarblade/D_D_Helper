@@ -18,7 +18,7 @@ class CharacterViewController: UITableViewController {
   @IBOutlet weak var characterTable: UITableView!
 
   
-  var characters: [NSManagedObject] = []
+  var characters = [NSManagedObject]()
   
   override func viewDidLoad() {
 
@@ -46,7 +46,7 @@ class CharacterViewController: UITableViewController {
     } catch let error as NSError {
       print("Could not fetch. \(error), \(error.userInfo)")
     }
-    
+    tableView.reloadData()
   }
   
   
@@ -116,6 +116,43 @@ class CharacterViewController: UITableViewController {
     
   }
   
+  override func encodeRestorableState(with coder: NSCoder) {
+    super.encodeRestorableState(with: coder)
+    
+    
+    
+  }
+  
+  override func decodeRestorableState(with coder: NSCoder) {
+    super.decodeRestorableState(with: coder)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+//    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+//      return
+//    }
+//    
+//    let managedContext = appDelegate.persistentContainer.viewContext
+//    
+//    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Character")
+//    
+//    do {
+//      characters = try managedContext.fetch(fetchRequest)
+//    } catch let error as NSError {
+//      print("Could not fetch. \(error), \(error.userInfo)")
+//    }
+    
+    if let destination = segue.destination as? NewCharacterViewController {
+      if let indexPath = tableView.indexPathForSelectedRow {
+        destination.characters = [characters[indexPath.row]]
+      }
+    }
+//
+//    let destination = segue.destinationViewController as! NewCharacterViewController
+//    let indexPath = tableView.indexPathForSelectedRow!
+//    let selectedObject = fetchRequest.obje
+  }
   
 }
 

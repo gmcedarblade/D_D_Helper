@@ -175,7 +175,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Characters" id="5L0-Kd-FM5">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="M0U-Ee-COU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="M0U-Ee-COU">
                             <connections>
                                 <action selector="addNewCharacter:" destination="F4u-Z7-XQv" id="H8f-gm-ZbC"/>
                             </connections>
@@ -258,6 +258,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lej-gm-glE">
                                 <rect key="frame" x="168" y="573" width="38" height="30"/>
                                 <state key="normal" title="Save!"/>
+                                <connections>
+                                    <action selector="saveNewCharacterButton:" destination="Uv7-aH-G4b" eventType="touchUpInside" id="Utq-o6-U0U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

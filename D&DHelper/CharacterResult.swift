@@ -12,6 +12,10 @@ import CoreData
 @objc(CharacterResult)
 public class CharacterResult: NSManagedObject {
   
+  @nonobjc public class func fetchRequest() -> NSFetchRequest<CharacterResult> {
+    return NSFetchRequest<CharacterResult>(entityName: "Character");
+  }
+  
   @NSManaged public var alignment: String?
   @NSManaged public var armorClass: NSNumber?
   @NSManaged public var background: String?
